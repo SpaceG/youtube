@@ -6,7 +6,9 @@ Have Fun.
 
 Install it!
 
-First be sure you have already installed Node.js, Grunt.js, Bower.js, Npm.js, Homebrew, and MongoDB to Start this small App. 
+First be sure you have already installed Node.js, Grunt.js, Bower.js, Npm.js, Homebrew, and MongoDB to Start this small App.
+
+More to Install, coming soon.. ! 
 
 
 
