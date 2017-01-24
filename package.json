@@ -1,0 +1,36 @@
+{
+  "name": "youtube-api",
+  "version": "1.0.0",
+  "description": "This is simple YouTube Api, which automatic your Uploads",
+  "main": "server.js",
+  "dependencies": {
+    "grunt": "^1.0.1"
+  },
+  "devDependencies": {
+    "file-system": "^2.2.2",
+    "grunt": "^1.0.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^2.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SpaceG/youtube.git"
+  },
+  "keywords": [
+    "Simple",
+    "YouTube",
+    "Api"
+  ],
+  "author": "DerHacker",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SpaceG/youtube/issues"
+  },
+  "homepage": "https://github.com/SpaceG/youtube#readme"
+}
