@@ -1,26 +1,282 @@
-
-
-
 <!DOCTYPE html>
-<html>
-<head>
-	<title>Hello World </title>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>YTAPI v.0.0.1</title>
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+		<script type="text/javascript">
+			console.log("Hello World");
+		</script>
+		<link href="http://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./api-styles/css/yt-css-api.css">
+			<link rel="stylesheet" type="text/css" href="./fancybox/jquery.fancybox.css">
 
-	<link rel="stylesheet" type="text/css" href="./api-styles/css/styles.css">
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css
-">
+		<style>
+		
+		  codenza, code {}     /*  noop mnemonic aide that codenza mimes code tag  */
+		  codenza {display:block;white-space:pre-wrap;    font-family: monospace;}
+		</style>`
+	</head>
+	<body>
+	<nav class="yt-api-header">
+	<div class="container">
+		<div class="yt-api-header-inner">
+		<img src="http://www.freeiconspng.com/uploads/youtube-logo-png-20.png"/>
+			<h2 style="text-align: center;">
+					<small>YTAPI v.0.0.1</small><br>
+					Simple YouTube Api
+				</h2>
+			</div>
+		</div>
+	</nav>
+		<div class="container">
+<!-- Content 1 --> 
+			<h2>
+				<small>YTAPI_CONTENT 1</small><br>
+				Simple last video
+			</h2>
+<div class="code">
+	<pre>$('#YTAPI_CONTENT1-container').ytapi({
+		apiKey: 'YOUR_YT_API_KEY',
+		username: 'lucasgatsas',
+		itemsPerPage: 1
+	});
+	</pre>
+</div>
+			<div class="YTAPI_CONTENT" id="YTAPI_CONTENT1">
+<div class="code">
+	<pre>$('#YTAPI_CONTENT1-container').ytapi({
+		apiKey: 'YOUR_YT_API_KEY',
+		username: 'lucasgatsas',
+		itemsPerPage: 1
+		});
+	</pre>
+</div>
+			<div class="YTAPI_CONTENT-container" id="YTAPI_CONTENT1-container"></div>
+			</div>
+<!-- Content 2 --> 
+				<h2>
+					<small>YTAPI_CONTENT 2</small><br>
+					Gallery with videos opening in their YouTube pages
+					<span class="loading" id="YTAPI_CONTENT2-loading"></span>
+				</h2>
+<div class="code">
+	<pre>
+		$('#YTAPI_CONTENT2-container').ytapi({
+		apiKey: 'YOUR_YT_API_KEY',
+		playlistId: 'PLrEnWoR732-BHrPp_Pm8_VleD68f9s14-',
+		itemsPerPage: 18,
+		embedVideo: false,
+		loadingControl: $('#YTAPI_CONTENT2-loading'),
+		prevPageControl: $('#YTAPI_CONTENT2-prev-page'),
+		nextPageControl: $('#YTAPI_CONTENT2-next-page'),
+		templates: {
+			thumbnail: '< img src="{{image_medium}}">'
+		}
+	});
+	</pre>
+</div>
+			<div class="YTAPI_CONTENT" id="YTAPI_CONTENT2">
+				<div class="code">				
+				</div>
+				<div class="YTAPI_CONTENT-container" id="YTAPI_CONTENT2-container"></div>
+				<div class="pagination">
+					<span id="YTAPI_CONTENT2-prev-page">< Previous</span>
+					<span id="YTAPI_CONTENT2-next-page">Next ></span>
+				</div>
+			</div>
+<!-- Content 3 --> 
+				<h2>
+					<small>YTAPI_CONTENT 3</small><br>
+					Gallery with embed videos
+					<span class="loading" id="YTAPI_CONTENT3-loading"></span>
+				</h2>
+<div class="code">
+	<pre>
+		$('#YTAPI_CONTENT3-container').ytapi({
+		apiKey: 'YOUR_YT_API_KEY',
+		username: 'lucasgatsas',
+		itemsPerPage: 6,
+		loadingControl: $('#YTAPI_CONTENT3-loading'),
+		prevPageControl: $('#YTAPI_CONTENT3-prev-page'),
+		nextPageControl: $('#YTAPI_CONTENT3-next-page')
+	});
+	</pre>
+</div>
+			<div class="YTAPI_CONTENT" id="YTAPI_CONTENT3">
+				<div class="code">
+					
+				</div>
+				<div class="YTAPI_CONTENT-container" id="YTAPI_CONTENT3-container"></div>
+				<div class="pagination">
+					<span id="YTAPI_CONTENT3-prev-page">< Previous</span>
+					<span id="YTAPI_CONTENT3-next-page">Next ></span>
+				</div>
+			</div>
+<!-- Content 4 --> 
+				<h2>
+					<small>YTAPI_CONTENT 4</small><br>
+					Gallery with videos opening through the Fancybox
+					<span class="loading" id="YTAPI_CONTENT4-loading"></span>
+				</h2>
+				<div class="container">
+<codenza>
+	$('#example4-container').ytapi({
+	apiKey: 'YOUR_YT_API_KEY',
+	playlistId: 'PLrEnWoR732-BHrPp_Pm8_VleD68f9s14-',
+	itemsPerPage: 10,
+	embedVideo: false,
+	showVideoTitle: true,
+	loadingControl: $('#YTAPI_CONTENT4-loading'),
+	prevPageControl: $('#YTAPI_CONTENT4-prev-page'),
+	nextPageControl: $('#YTAPI_CONTENT4-next-page'),
+	mediaViewer: function (videoId) {
+		$.fancybox.open({
+			type: 'html',
+		content: '< iframe width="720" height="405" src="https://www.youtube.com/ embed/' + videoId + '?autoplay=1" frameborder="0" allowfullscreen></iframe >',§
+			padding: 0,
+			helpers : {
+		        overlay : {
+		            css : {
+		                'background' : 'rgba(0, 0, 0, .85)'
+		            }
+		        }
+		    }
+		});
+	},
+	templates: {
+		thumbnail: '< img src="{ { image_medium}}">'
+	}
+});<codenza>
+</div>
+			<div class="YTAPI_CONTENT" id="YTAPI_CONTENT4">
+				<div class="code">	
+				</div>
+				<div class="YTAPI_CONTENT-container" id="YTAPI_CONTENT4-container"></div>
+				<div class="pagination">
+					<span id="YTAPI_CONTENT4-prev-page">< Previous</span>
+					<span id="YTAPI_CONTENT4-next-page">Next ></span>
+				</div>
+			</div>
+<!-- Content 5 --> 
+				<h2>
+					<small>YTAPI_CONTENT 5</small><br>
+					Gallery with thumbnails and an area to show the selected video
+					<span class="loading" id="YTAPI_CONTENT5-loading"></span>
+				</h2>
+<div class="code">
+<pre>
+$('#YTAPI_CONTENT5-container').ytapi({
+				username: 'lucasgatsas',
+				itemsPerPage: 6,
+				autoplay: 1,
+				
+				embedVideo: false,
+				loadingControl: $('#YTAPI_CONTENT5-loading'),
+				prevPageControl: $('#YTAPI_CONTENT5-prev-page'),
+				nextPageControl: $('#YTAPI_CONTENT5-next-page'),
+				mediaViewer: $('#YTAPI_CONTENT5-media-viewer'),
+				templates: {
+					thumbnail: '< img src="{{image_medium}}">'
+				}
+			
+			});
+</pre>
+</div>
 
+			<div class="YTAPI_CONTENT" id="YTAPI_CONTENT5">
+				<div class="media-viewer" id="YTAPI_CONTENT5-media-viewer"></div>
+				<div class="thumbnails">
+					<div class="YTAPI_CONTENT-container" id="YTAPI_CONTENT5-container"></div>
+					<div class="pagination">
+						<span id="YTAPI_CONTENT5-prev-page">< Previous</span>
+						<span id="YTAPI_CONTENT5-next-page">Next ></span>
+					</div>
+				</div>				
+			</div>
+		</div>
+		<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+		<script src="./fancybox/jquery.fancybox.pack.js"></script>
+		<script src="jquery.ytapi.min.js"></script>
+		<script src="./api-styles/js/yt-script-api.js"></script>
 
-<script type="text/javascript">
-console.log("Hello World");
-</script>
+		<script>
+			$.fn.ytapi.defaults.apiKey = 'AIzaSyDXZLsQZnx9vsI88SM8YOnO1jSZR9Y5q8I';
 
+			// YTAPI_CONTENT 1 - Simple last video
+			$('#YTAPI_CONTENT1-container').ytapi({
+				username: 'Kl3ngan',
+				itemsPerPage: 3
+			});
 
-</head>
-<body>
+			// YTAPI_CONTENT 2 - Gallery with videos opening in their YouTube pages
+			$('#YTAPI_CONTENT2-container').ytapi({
+				playlistId: 'PLT9-gE4rqhfUHAgaEN9k1LiJJojhbHjJI',
+				itemsPerPage: 40,
+				embedVideo: false,
+				loadingControl: $('#YTAPI_CONTENT2-loading'),
+				prevPageControl: $('#YTAPI_CONTENT2-prev-page'),
+				nextPageControl: $('#YTAPI_CONTENT2-next-page'),
+				templates: {
+					thumbnail: '<img src="{{image_medium}}">'
+				}
+			});
 
-<nav><div class="yt-1"> <p>This is the HTML DOM</p></div></nav>
+			// YTAPI_CONTENT 3 - Gallery with embed videos
+			$('#YTAPI_CONTENT3-container').ytapi({
+				username: 'Kl3ngan',
+				itemsPerPage: 12,
+				loadingControl: $('#YTAPI_CONTENT3-loading'),
+				prevPageControl: $('#YTAPI_CONTENT3-prev-page'),
+				nextPageControl: $('#YTAPI_CONTENT3-next-page')
+			});
 
-<script src="./api-styles/js/script.js"></script>
-</body>
+			// YTAPI_CONTENT 4 - Gallery with videos opening through the Fancybox
+			$('#YTAPI_CONTENT4-container').ytapi({
+				playlistId: 'PLT9-gE4rqhfXTv-oIbZnZb_BTziu2zyRI',
+				itemsPerPage: 10,
+				autoplay: 1,
+				embedVideo: false,
+				showVideoTitle: true,
+				loadingControl: $('#YTAPI_CONTENT4-loading'),
+				prevPageControl: $('#YTAPI_CONTENT4-prev-page'),
+				nextPageControl: $('#YTAPI_CONTENT4-next-page'),
+				mediaViewer: function (videoId) {
+					$.fancybox.open({
+						type: 'html',
+						content: '<iframe width="600" height="300" src="https://www.youtube.com/embed/' + videoId + '?autoplay=1" frameborder="0" allowfullscreen></iframe>',
+						padding: 0,
+						helpers : {
+					        overlay : {
+					            css : {
+					                'background' : 'rgba(0, 0, 0, .85)'
+					            }
+					        }
+					    }
+					});
+				},
+				templates: {
+					thumbnail: '<img src="{{image_medium}}">'
+				}
+			});
+
+			// YTAPI_CONTENT 5 - Gallery with thumbnails and an area to show the selected video
+			$('#YTAPI_CONTENT5-container').ytapi({
+				username: 'Kl3ngan',
+				itemsPerPage: 15,
+				autoplay: 1,
+				
+				embedVideo: false,
+				loadingControl: $('#YTAPI_CONTENT5-loading'),
+				prevPageControl: $('#YTAPI_CONTENT5-prev-page'),
+				nextPageControl: $('#YTAPI_CONTENT5-next-page'),
+				mediaViewer: $('#YTAPI_CONTENT5-media-viewer'),
+				templates: {
+					thumbnail: '<img src="{{image_medium}}">'
+				}
+			
+			});
+		</script>
+		
+	</body>
 </html>

@@ -3,7 +3,7 @@ var fs = require('fs');
 
 
 http.createServer(function(request, response) {
-	    console.log('request starting...');
+	    console.log('server request starting your App...');
 
 	var url = request.url;
 	switch(url) {
@@ -13,11 +13,17 @@ http.createServer(function(request, response) {
 		case '/add':
 			getStaticFileContent(response, 'public/add.html','text/html');
 			break;
-		case '/css/style.css':
-			getStaticFileContent(response, 'css/style.css','text/css');
+		case '/api-styles/css/yt-css-api.css':
+			getStaticFileContent(response, 'api-styles/css/yt-css-api.css','text/css');
 			break;
-		case '/js/app.js':
-			getStaticFileContent(response, 'js/app.js','text/javascript');
+		case '/fancybox/jquery.fancybox.css':
+			getStaticFileContent(response, 'fancybox/jquery.fancybox.css','text/css');
+			break;
+		case '/api-styles/js/yt-script-api.js':
+			getStaticFileContent(response, 'api-styles/js/yt-script-api.js','text/javascript');
+			break;
+		case '/fancybox/jquery.fancybox.pack.js':
+			getStaticFileContent(response, 'fancybox/jquery.fancybox.pack.js','text/javascript');
 			break;
 		default:
 
@@ -49,7 +55,7 @@ function getStaticFileContent(response, filepath, contentType) {
 }
 
 
-
+/**
 
 var MongoClient = require('mongodb').MongoClient
     , format = require('util').format;
@@ -72,3 +78,4 @@ MongoClient.connect('mongodb://127.0.0.1:27017/YouTubeApi', function(err, db) {
     });
 });
 
+**/

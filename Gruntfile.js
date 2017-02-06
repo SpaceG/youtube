@@ -26,6 +26,7 @@ grunt.initConfig({
     },
 },
 });
+grunt.loadNpmTasks('grunt-npm-install');
 grunt.loadNpmTasks('grunt-contrib-concat');
 grunt.loadNpmTasks('grunt-contrib-watch');
 grunt.registerTask('default', ['concat', 'watch']);
